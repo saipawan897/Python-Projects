@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    {{first_event}} to {{second_event}}
+    {% for hist in hists %}
+    <img style="width:500px; height:500px;margin-top:-38px" src="{{url_for('static', filename=hist)}}" alt="{{hists}}" >
+	<p>
+		<h3>{{ hists}}</h3>
+    {% endfor %}
+</body>
+</html>

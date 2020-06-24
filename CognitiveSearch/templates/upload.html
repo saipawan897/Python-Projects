@@ -1,0 +1,46 @@
+<!doctype html>
+<title>Python Flask File Upload Example</title>
+<h1 align = "center">Cognitive Search</h1>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+<form method="post" action="upload.html" enctype="multipart/form-data" align = "center">
+    
+
+        <p>
+			<h3 align = "center"> Please enter the keyword</h3>
+		 </p>
+       <p>
+           <input name="text" align = "center">
+       </p>
+    <p>
+		<input type="submit" value="Submit" align = "center">
+	</p>
+	
+    {% for hist in hists %}
+	<div>
+   
+	<p>
+		
+		
+	    <img style=" display: block;margin-left: auto;margin-right: auto;width: 50%;" src="{{url_for('static', filename=hist)}}" alt="{{hists}}" >
+		{{hist}}
+		
+		
+		
+	</p>
+	
+	</div>
+	
+    {% endfor %}
+	
+		
+</form>
